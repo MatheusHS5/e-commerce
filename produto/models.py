@@ -1,4 +1,7 @@
 from django.db import models
+from PIL import Image
+import os
+from django.conf import settings
 
 class Produto(models.Model):
     nome = models.CharField(max_length=255)
@@ -17,6 +20,18 @@ class Produto(models.Model):
         )
     )
 
+    ''' Exibindo a imagem do produto no sistema'''
+    @staticmethod
+    def resize_image(img, new_width=800):
+        print(img.name)
+
+    ''' Redimencionando as imagens do sistema'''
+    def save(self, *args, **kwargs):
+        super() .save(*args, **kwargs)
+
+    ''' Retornando o nome do objeto produto para o sistema'''
+    def __str__(self):
+        return self.nome
 
 """"
 Variacao:

@@ -1,6 +1,5 @@
 from django.db import models
 
-""" A Classe produto herda de Models.Model"""
 class Produto():
     nome = models.CharField(max_length=255)
     descricao_curta = models.TextField(max_length=255)
@@ -17,6 +16,7 @@ class Produto():
             ('S', 'Simples'),
         )
     )
+
 
 """"
 Variacao:

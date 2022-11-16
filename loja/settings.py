@@ -32,15 +32,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'produto',
-    'pedido',
-    'perfil',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'produto',
+    'pedido',
+    'perfil',
 
 # TODO: Remover debug toolbar 
 # (Será usando apenas em tempo de desenvolvimento para acompanhar o debug das páginas)

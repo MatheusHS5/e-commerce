@@ -13,7 +13,7 @@ class Produto():
         default='V',
         max_length=1,
         choices=(
-            ('V', 'Variação'),
+            ('V', 'Variavel'),
             ('S', 'Simples'),
         )
     )

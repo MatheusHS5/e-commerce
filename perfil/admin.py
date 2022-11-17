@@ -1,3 +1,5 @@
 from django.contrib import admin
+from . import models
 
-# Register your models here.
+""" Registrando a classe das models"""
+admin.site.register(models.Perfil)

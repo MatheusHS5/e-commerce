@@ -2,16 +2,11 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views import View
 from django.http import HttpResponse
+from . import models
 
-'''
-REABILITAR ESSA CLASS E REMOVAR A SEGUINTE DEPOIS:
 class ListaProdutos(ListView):
-    pass
-'''
-
-class ListaProdutos(View):
-    def get(self, *args, **kwargs):
-        return HttpResponse('ListaProdutos')
+    model = models.Produto
+    template_name = 'produto/lista.html'
 
 class DetalheProduto(View):
     def get(self, *args, **kwargs):

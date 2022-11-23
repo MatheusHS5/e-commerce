@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 from django.contrib.messages import constants
 import os
 
+import django_heroku
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -153,3 +155,5 @@ SESSION_SAVE_EVERY_REQUEST = False
 
 # Serializer - Padrão JSON
 # SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
+django_heroku.settings(locals())

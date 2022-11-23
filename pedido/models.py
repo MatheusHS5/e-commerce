@@ -1,10 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-''' Model de Pedido '''
+
 class Pedido(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     total = models.FloatField()
+    qtd_total = models.PositiveIntegerField()
     status = models.CharField(
         default="C",
         max_length=1,
@@ -21,7 +22,7 @@ class Pedido(models.Model):
     def __str__(self):
         return f'Pedido N. {self.pk}'
 
-''' Model de ItemPedido '''
+
 class ItemPedido(models.Model):
     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
     produto = models.CharField(max_length=255)
@@ -38,4 +39,4 @@ class ItemPedido(models.Model):
 
     class Meta:
         verbose_name = 'Item do pedido'
-        verbose_name_plural = "Itens do pedido"
+        verbose_name_plural = 'Itens do pedido'

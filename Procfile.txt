@@ -1,2 +1,1 @@
 web: gunicorn tutorial_heroku.wsgi
-web: run manage.py

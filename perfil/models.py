@@ -68,8 +68,8 @@ class Perfil(models.Model):
             if cpf_salvo is not None and self.pk != perfil.pk:
                 error_messages['cpf'] = 'CPF já existe.'
 
-        if not valida_cpf(self.cpf):
-            error_messages['cpf'] = 'Digite um CPF válido'
+        """if not valida_cpf(self.cpf):
+            error_messages['cpf'] = 'Digite um CPF válido'"""
 
         if re.search(r'[^0-9]', self.cep) or len(self.cep) < 8:
             error_messages['cep'] = 'CEP inválido, digite os 8 digitos do CEP.'
